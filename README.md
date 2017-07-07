@@ -1,4 +1,4 @@
-# brubaker
+# Joel Brubaker
 
 > My personal website.
 
