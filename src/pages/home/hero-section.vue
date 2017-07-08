@@ -1,5 +1,5 @@
 <template>
-  <div class="section__hero pattern" :style="height ? { height } : null">
+  <div class="section__hero pattern" :style="height ? style : null">
     <i class="material-icons md-48 computer">computer</i>
     <small class="name">Joel Brubaker</small>
     <h1>Full Stack Developer</h1>
@@ -20,14 +20,17 @@ export default {
 
   },
   computed: {
-
+    style () {
+      return {
+        height: this.height + 'px'
+      }
+    }
   },
   methods: {
 
   },
   mounted () {
-    let height = document.querySelector('.section__hero').clientHeight
-    this.height = `${height}px`
+
   }
 }
 </script>

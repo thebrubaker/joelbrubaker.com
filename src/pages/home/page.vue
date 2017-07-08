@@ -38,7 +38,9 @@
     },
     mounted () {
       this.ready = true
-      this.$refs.hero.height = document.querySelector('.section__hero').clientHeight
+      this.$nextTick(() => {
+        this.$refs.hero.height = document.querySelector('.section__hero').clientHeight
+      })
     }
   }
 </script>
