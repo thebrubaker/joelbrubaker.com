@@ -22,12 +22,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+    padding: 0;
   }
   a {
-    color: rgba(0,135,255,1);
+    color: #2c3e50;
+    border-bottom: 1px solid #FFB88C;
     text-decoration: none;
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
   .highlight {
@@ -46,4 +48,20 @@
   /* Rules for using icons as white on a dark background. */
   .material-icons.md-light { color: rgba(255, 255, 255, 1); }
   .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+  .slide-right-enter-active, .slide-right-leave-active {
+    transition: all 0.2s;
+    transform: translateX(0);
+  }
+  .slide-right-enter, .slide-right-leave-to /* .slide-right-leave-active in <2.1.8 */ {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 2s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0;
+  }
 </style>

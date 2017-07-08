@@ -1,14 +1,8 @@
 <template>
   <div class="section__hero pattern" :style="height ? { height } : null">
-    <!-- <logo></logo> -->
-    <!-- <profile-photo></profile-photo> -->
     <i class="material-icons md-48 computer">computer</i>
     <small class="name">Joel Brubaker</small>
     <h1>Full Stack Developer</h1>
-    <!-- <span class="solid-line-break"></span> -->
-    <!-- <p>I build applications for the modern web. My favorite technologies include Laravel, Vue.js, Firebase and Google's Cloud Platform.</p> -->
-    <!-- <br /> -->
-    <!-- <a role="button" href="mailto:pk.joel@gmail.com" target="_blank">Contact Me</a> -->
   </div>
 </template>
 

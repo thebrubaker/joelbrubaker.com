@@ -1,6 +1,6 @@
 <template>
 <div class="profile-photo">
-  <img src="/static/img/joel-brubaker.jpg" alt="Joel Brubaker" width="150px">
+  <img src="/static/img/joel-brubaker.jpg" alt="Joel Brubaker" width="100px">
 </div>
 </template>
 
