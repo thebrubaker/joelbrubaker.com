@@ -70,8 +70,6 @@ export default {
         font-family: 'Fjalla One', sans-serif;
         font-weight: 800;
         font-size: 2.2em;
-        margin-top: 20px;
-        margin-bottom: 80px;
         @media (min-width: 800px) {
           margin-bottom: 0px;
         }

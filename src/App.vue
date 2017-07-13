@@ -21,7 +21,7 @@
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: hsl(0, 10%, 25%);
     padding: 0;
   }
   a {
@@ -56,6 +56,15 @@
   .slide-right-enter, .slide-right-leave-to /* .slide-right-leave-active in <2.1.8 */ {
     opacity: 0;
     transform: translateX(-100%);
+  }
+
+  .drop-down-enter-active, .drop-down-leave-active {
+    transition: all 2s;
+    transform: translateY(0);
+  }
+  .drop-down-enter, .drop-down-leave-to /* .drop-down-leave-active in <2.1.8 */ {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 
   .fade-enter-active, .fade-leave-active {

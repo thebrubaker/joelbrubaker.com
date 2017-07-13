@@ -38,6 +38,8 @@ export default {
     height: 100vh;
     width: 100%;
     background-color: white;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
   .container {
     display: flex;

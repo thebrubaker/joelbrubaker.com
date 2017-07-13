@@ -1,8 +1,9 @@
 <template>
   <transition name="fade">
     <main-layout id="home-page" v-show="ready">
-      <hero-section ref="hero"></hero-section>
-      <introduction></introduction>
+      <hero-section ref="hero" />
+      <introduction ref="introduction" />
+      <skills ref="skills" />
     </main-layout>
   </transition>
 </template>
@@ -11,6 +12,7 @@
   import MainLayout from '~/layouts/main-layout'
   import HeroSection from './hero-section'
   import Introduction from './introduction'
+  import Skills from './skills'
   import { mapComputed } from '~/utils/vuex'
 
   export default {
@@ -23,7 +25,8 @@
     components: {
       MainLayout,
       HeroSection,
-      Introduction
+      Introduction,
+      Skills
     },
     props: {
 
@@ -39,7 +42,8 @@
     mounted () {
       this.ready = true
       this.$nextTick(() => {
-        this.$refs.hero.height = document.querySelector('.section__hero').clientHeight
+        this.$refs.hero.height = this.$refs.hero.$el.clientHeight
+        this.$refs.skills.offset = this.$refs.skills.$el.offsetTop
       })
     }
   }
