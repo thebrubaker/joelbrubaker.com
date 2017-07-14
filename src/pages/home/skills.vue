@@ -1,49 +1,49 @@
 <template>
   <div class="skills-section">
-    <transition name="drop-down">
-      <div class="card" v-if="showCards">
-        <div class="left">
-          <laravel-icon width="35" height="35" />
+    <div class="container">
+      <div class="summary">
+        <h1>Expertise & Knowledge</h1>
+        <p>I build applications of all sizes, from rapid single-page prototypes with Firebase and Vue.js, to large-scale backend APIs with Laravel and Google Cloud Platform. Knowing the full stack gives me the flexibility to choose the right tool for the job.</p>
+      </div>
+      <div class="cards">
+        <div class="card" v-if="showCards">
+          <div class="left">
+            <laravel-icon width="35" height="35" />
+          </div>
+          <div class="right">
+            <h1>Laravel</h1>
+            <p>A modern toolkit for building high-quality, well-tested backends and RESTful APIs.</p>
+          </div>
         </div>
-        <div class="right">
-          <h1>Laravel</h1>
-          <p>A modern toolkit for building high-quality, well-tested backends and RESTful APIs.</p>
+        <div class="card" v-if="showCards">
+          <div class="left">
+            <vue-icon width="35" height="35" />
+          </div>
+          <div class="right">
+            <h1>Vue.js</h1>
+            <p>A javascript framework for rapid interface development and lightning-fast single page apps.</p>
+          </div>
+        </div>
+        <div class="card" v-if="showCards">
+          <div class="left">
+            <firebase-icon width="35" height="35" />
+          </div>
+          <div class="right">
+            <h1>Firebase</h1>
+            <p>Suite of tools for rapidly prototyping mobile applications, without managing infrastructure.</p>
+          </div>
+        </div>
+        <div class="card" v-if="showCards">
+          <div class="left">
+            <gcs-icon width="35" height="35" />
+          </div>
+          <div class="right">
+            <h1>Google Cloud Platform</h1>
+            <p>Secure, global, high-performance, cost-effective infrastructure with the smartest tools available.</p>
+          </div>
         </div>
       </div>
-    </transition>
-    <transition name="drop-down">
-      <div class="card" v-if="showCards">
-        <div class="left">
-          <vue-icon width="35" height="35" />
-        </div>
-        <div class="right">
-          <h1>Vue.js</h1>
-          <p>A javascript framework for rapid interface development and lightning-fast single page apps.</p>
-        </div>
-      </div>
-    </transition>
-    <transition name="drop-down">
-      <div class="card" v-if="showCards">
-        <div class="left">
-          <firebase-icon width="35" height="35" />
-        </div>
-        <div class="right">
-          <h1>Firebase</h1>
-          <p>Suite of tools for rapidly prototyping mobileapplications, without managing infrastructure.</p>
-        </div>
-      </div>
-    </transition>
-    <transition name="drop-down">
-      <div class="card" v-if="showCards">
-        <div class="left">
-          <gcs-icon width="35" height="35" />
-        </div>
-        <div class="right">
-          <h1>Google Cloud Platform</h1>
-          <p>Secure, global, high-performance, cost-effective infrastructure with the smartest tools available.</p>
-        </div>
-      </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -95,24 +95,57 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .log {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
-  }
+  $small: 700px;
+
   .skills-section {
-    background-color: rgb(245,245,245);
+    background-color: #f2f2f2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23acacac' fill-opacity='0.09'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     width: 100%;
     min-height: 100vh;
-    padding: 15px 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: $small) {
+      padding: 30px;
+    }
+  }
+  .container {
+    display: flex;
+    max-width: 900px;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: $small) {
+      flex-direction: row;
+    }
+  }
+  .summary {
+    padding: 20px;
+    @media (min-width: $small) {
+      flex: 5;
+    }
+    h1 {
+      font-size: 20px;
+      font-family: 'Montserrat';
+      border-bottom: 3px solid #FFB88C;
+      display: inline-block;
+      @media (min-width: $small) {
+        font-size: 24px;
+      }
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      @media (min-width: $small) {
+        line-height: 2em;
+        font-size: 20px;
+      }
+    }
+  }
+  .cards {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    @media (min-width: 400px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 30px 15px;
+    @media (min-width: $small) {
+      flex: 4;
     }
   }
   .card {
@@ -121,12 +154,8 @@ export default {
     border-radius: 3px;
     display: flex;
     padding: 15px;
-    margin: 10px 0;
-    @media (min-width: 500px) {
-      margin: 10px;
-      flex: 0 0 25%;
-      flex: 1;
-    }
+    margin: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.05);
     h1 {
       font-family: 'Avenir';
       margin: 0 0 5px 0;
