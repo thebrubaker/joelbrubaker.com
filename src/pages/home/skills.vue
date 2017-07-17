@@ -3,7 +3,7 @@
     <div class="container">
       <div class="summary">
         <h1>Expertise & Knowledge</h1>
-        <p>I build applications of all sizes, from rapid single-page prototypes with Firebase and Vue.js, to large-scale backend APIs with Laravel and Google Cloud Platform. Knowing the full stack gives me the flexibility to choose the right tool for the job.</p>
+        <p>I build applications of all sizes, from rapid single-page prototypes to large-scale backends with RESTful APIs. Knowing the full stack gives me the flexibility to choose the right tool for the job.</p>
       </div>
       <div class="cards">
         <div class="card" v-if="showCards">
@@ -120,11 +120,13 @@ export default {
   }
   .summary {
     padding: 20px;
+    margin: 50px 0 30px 0;
     @media (min-width: $small) {
       flex: 5;
+      margin: 0;
     }
     h1 {
-      font-size: 20px;
+      font-size: 1.5em;
       font-family: 'Montserrat';
       border-bottom: 3px solid #FFB88C;
       display: inline-block;
@@ -133,8 +135,8 @@ export default {
       }
     }
     p {
-      font-size: 1.1em;
-      line-height: 1.8em;
+      font-size: 1.2em;
+      line-height: 2em;
       @media (min-width: $small) {
         line-height: 2em;
         font-size: 20px;

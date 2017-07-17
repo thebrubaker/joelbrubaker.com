@@ -35,7 +35,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-color: white;
     box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);

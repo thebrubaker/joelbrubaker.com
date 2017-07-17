@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition>
     <div v-if="sidebar" class="page-overlay" @click="toggle"></div>
   </transition>
 </template>
@@ -40,10 +40,9 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #DE6262;
-    background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);
-    background: linear-gradient(to right, #FFB88C, #DE6262);
-    opacity: 0.4;
+    background: rgba(255,255,255,0.1);
+    // background: linear-gradient(to right, #FFB88C, #DE6262);
+    backdrop-filter: blur(4px);
   }
   .fade-enter-active, .fade-leave-active {
     transition: opacity .3s

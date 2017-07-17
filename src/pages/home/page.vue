@@ -10,7 +10,7 @@
 
 <script>
   import MainLayout from '~/layouts/main-layout'
-  import HeroSection from './hero-section'
+  import HeroSection from './hero/section-v2'
   import Introduction from './introduction'
   import Skills from './skills'
   import { mapComputed } from '~/utils/vuex'

@@ -68,9 +68,9 @@ export default {
     height: 55px;
     transform: translateY(-48px);
     transition: 0.2s;
-    background: #DE6262;
-    background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);
-    background: linear-gradient(to right, #FFB88C, #DE6262);
+    background: rgba(222, 98, 98, 0.6);
+    background: linear-gradient(to right, rgba(255, 184, 140, 0.8), rgba(222, 98, 98, 0.8));
+    backdrop-filter: blur(2px);
   }
   .stripe.slide {
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2);
