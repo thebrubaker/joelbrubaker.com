@@ -36,6 +36,7 @@ export default {
     justify-content: center;
     align-content: center;
     height: 80vh;
+    max-height: 900px;
     width: 100%;
     background-color: white;
     box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);

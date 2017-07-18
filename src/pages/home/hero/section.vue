@@ -56,7 +56,7 @@ export default {
   .section {
     &__hero {
       display: flex;
-      height: 100vh;
+      height: 90vh;
       width: 100%;
       flex-direction: column;
       align-items: center;
